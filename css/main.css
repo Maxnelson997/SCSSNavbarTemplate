@@ -1,0 +1,37 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent; }
+
+.layout {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: [navbar-s] 46px [navbar-e content-s] 1fr [content-e];
+  grid-template-columns: [s] 1fr [e]; }
+  .layout__navbar {
+    grid-row: navbar-s/navbar-e;
+    grid-column: s/e; }
+  .layout__content {
+    grid-row: content-s/content-e;
+    grid-column: s/e; }
+
+.navbar {
+  height: 46px;
+  background: #2f2f2f; }
+  .navbar a {
+    color: ghostwhite; }
